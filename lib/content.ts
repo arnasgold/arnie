@@ -26,10 +26,6 @@ export const site = {
   "domain": "arnas.it",
   "social": [
     {
-      "name": "Dribbble",
-      "href": "https://dribbble.com/arnasgold"
-    },
-    {
       "name": "Twitter",
       "href": "https://twitter.com/arnasgold"
     },

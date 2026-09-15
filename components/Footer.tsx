@@ -8,7 +8,6 @@ const pages = [
 ];
 
 const iconKey: Record<string, string> = {
-  Dribbble: "dribbble",
   Twitter: "x",
   Instagram: "instagram",
   LinkedIn: "linkedin",

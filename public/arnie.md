@@ -10,7 +10,7 @@ Sections marked `TODO` are placeholders to be filled in during the interview.
 - Design engineer based in Italy, working remotely.
 - Age 34. Started freelancing as a logo designer at 16, so eighteen years in design.
 - Email: arnasgold@gmail.com
-- Links: Dribbble dribbble.com/arnasgold · Twitter twitter.com/arnasgold · Instagram instagram.com/arnasgoldberg · LinkedIn linkedin.com/in/arnas-goldberg-48996a26
+- Links: Twitter twitter.com/arnasgold · Instagram instagram.com/arnasgoldberg · LinkedIn linkedin.com/in/arnas-goldberg-48996a26
 
 ## Now
 
