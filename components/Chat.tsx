@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { projects } from "@/lib/content";
+import { emitComposerFocus } from "@/lib/mark-events";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -170,6 +171,8 @@ export default function Chat({
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={onKey}
+          onFocus={() => emitComposerFocus(true)}
+          onBlur={() => emitComposerFocus(false)}
           rows={compact ? 1 : 2}
           maxLength={1500}
           placeholder={placeholder}
