@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "gen:arnie": "node scripts/gen-arnie.mjs",
+    "predev": "npm run gen:arnie",
+    "prebuild": "npm run gen:arnie",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.126.0",
     "next": "16.3.5",
     "react": "19.2.8",
     "react-dom": "19.2.8"
