@@ -27,6 +27,9 @@ import { COMPOSER_EVENT, type ComposerDetail } from "@/lib/mark-events";
  *
  * Nothing else in the core moves: bobbing it opens one-cell gaps at this size.
  * The hands are already detached, so they can breathe.
+ *
+ * Arrow keys walk it, as long as the composer is focused and empty. It can
+ * travel as far as the composer is wide and no further.
  */
 
 type Part = "head" | "shoulder" | "hand" | "torso" | "leg";
@@ -59,6 +62,64 @@ const CELLS: Cell[] = [
   { logo: [4, 3], body: [4, 7], part: "leg" },
   { logo: [4, 4], body: [4, 8], part: "leg" },
 ];
+
+/**
+ * Walk cycle, facing right. Six wide, nine tall, fourteen squares per frame.
+ * Edit these strings to retune the animation; "#" is a square, "." is empty.
+ */
+const WALK_RIGHT: string[][] = [
+  [
+    "...#..", // head, turned the way it walks
+    "...#..",
+    "......",
+    ".####.", // shoulders
+    "#....#", // hands
+    "...#..", // torso
+    "...#..",
+    ".#..#.", // legs, contact: feet apart
+    "#....#",
+  ],
+  [
+    "...#..",
+    "...#..",
+    "......",
+    ".####.",
+    "#....#",
+    "...#..",
+    "...#..",
+    "..##..", // passing: legs gathering
+    ".#..#.",
+  ],
+  [
+    "...#..",
+    "...#..",
+    "......",
+    ".####.",
+    "#....#",
+    "...#..",
+    "...#..",
+    "..#.#.", // contact the other way
+    ".#...#",
+  ],
+  [
+    "...#..",
+    "...#..",
+    "......",
+    ".####.",
+    "#....#",
+    "...#..",
+    "...#..",
+    "..##..", // passing again, opposite leg
+    "..#.#.",
+  ],
+];
+
+/** Walking left is the same cycle mirrored, so the head turns with it. */
+const WALK_LEFT: string[][] = WALK_RIGHT.map((f) =>
+  f.map((row) => row.split("").reverse().join("")),
+);
+
+const WALK_TICKS_PER_FRAME = 2; // 12fps paint, so the legs cycle at 6Hz
 
 const GRID_W = 7;
 const GRID_H = 9;
@@ -105,10 +166,16 @@ export default function Mark({
   const reduced = useRef(false);
   const pointer = useRef<{ x: number; y: number } | null>(null);
   const turn = useRef<-1 | 0 | 1>(0);
+  const walk = useRef({ dir: 0 as -1 | 0 | 1, x: 0, frame: 0, tick: 0 });
 
   const setFold = useCallback((to: 0 | 1) => {
     const f = fold.current;
     if (f.to === to) return;
+    if (to === 0) {
+      walk.current.dir = 0;
+      walk.current.x = 0;
+      walk.current.frame = 0;
+    }
     if (reduced.current) {
       f.v = to;
       f.from = to;
@@ -186,8 +253,34 @@ export default function Mark({
       // the hands rest below the shoulders and drop a row on the exhale
       const handsDown = !reduced.current && Math.sin((t / (BREATH_MS / 1000)) * Math.PI * 2) > 0.62;
 
+      const w = walk.current;
+      const walking = w.dir !== 0 && e > 0.9;
+      if (walking) {
+        w.tick += 1;
+        if (w.tick % WALK_TICKS_PER_FRAME === 0) w.frame = (w.frame + 1) % WALK_RIGHT.length;
+        // the figure may leave its own box, but never the composer's width
+        const lane = canvas!.parentElement?.parentElement;
+        const laneW = lane ? lane.getBoundingClientRect().width : GRID_W * cell;
+        const limit = Math.max(0, (laneW - GRID_W * cell) / 2);
+        w.x = clamp(w.x + w.dir * cell, -limit, limit);
+      }
+      canvas!.style.transform = w.x ? `translateX(${Math.round(w.x)}px)` : "";
+
       ctx!.clearRect(0, 0, GRID_W * cell, GRID_H * cell);
       ctx!.fillStyle = ink;
+
+      if (walking) {
+        const rows = (w.dir > 0 ? WALK_RIGHT : WALK_LEFT)[w.frame];
+        for (let ry = 0; ry < rows.length; ry++) {
+          for (let rx = 0; rx < rows[ry].length; rx++) {
+            if (rows[ry][rx] !== "#") continue;
+            const x = Math.round(BODY_ORIGIN[0] + rx);
+            const y = Math.round(BODY_ORIGIN[1] + ry);
+            ctx!.fillRect(x * cell, y * cell, cell, cell);
+          }
+        }
+        return;
+      }
 
       for (const c of CELLS) {
         const lx = LOGO_ORIGIN[0] + c.logo[0];
@@ -234,6 +327,25 @@ export default function Mark({
     window.addEventListener("pointermove", onPointer, { passive: true });
     document.addEventListener("pointerleave", onLeave);
 
+    // Arrows walk the figure, but only while the composer is focused and empty,
+    // so they never fight the caret or scroll the page.
+    const canWalk = () => {
+      const el = document.activeElement;
+      return el instanceof HTMLTextAreaElement && el.value === "";
+    };
+    const onKeyDown = (ev: KeyboardEvent) => {
+      if (reduced.current) return;
+      if (ev.key !== "ArrowRight" && ev.key !== "ArrowLeft") return;
+      if (!canWalk()) return;
+      ev.preventDefault();
+      walk.current.dir = ev.key === "ArrowRight" ? 1 : -1;
+    };
+    const onKeyUp = (ev: KeyboardEvent) => {
+      if (ev.key === "ArrowRight" || ev.key === "ArrowLeft") walk.current.dir = 0;
+    };
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("keyup", onKeyUp);
+
     const onComposer = (e: Event) => {
       const detail = (e as CustomEvent<ComposerDetail>).detail;
       setFold(detail?.focused ? 1 : 0);
@@ -248,6 +360,8 @@ export default function Mark({
       mq.removeEventListener("change", onMq);
       window.removeEventListener("pointermove", onPointer);
       document.removeEventListener("pointerleave", onLeave);
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("keyup", onKeyUp);
       window.removeEventListener(COMPOSER_EVENT, onComposer);
       if (timer) clearTimeout(timer);
     };
