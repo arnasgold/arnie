@@ -43,7 +43,7 @@ export const home = {
   headline: "I design in code. Eighteen years of brand, product and motion, now shipped as working software.",
   now: {
     label: "Now",
-    html: 'Design at <a href="https://gte.xyz" target="_blank" rel="noreferrer">GTE</a>, an on-chain perpetuals exchange. Terminal, order flow, positions, brand. I design the interface and build it.',
+    html: 'Head of design at <a href="https://gte.xyz" target="_blank" rel="noreferrer">GTE</a>. I design the product and ship it in code.',
   },
   stack: {
     label: "Stack",
@@ -68,7 +68,7 @@ export const about: Block[] = [
   {
     type: "paragraph",
     col: "full",
-    html: 'I\'m Arnas Goldberg, a design engineer based in Italy. I started freelancing as a logo designer at sixteen, spent ten years at Hanno moving from brand to web to front-end to healthcare product design, and spent three years at Ready shaping the wallet and its design system, with side projects along the way helping Vesu and Pure Poker get their design off the ground. Today I work on <a href="https://gte.xyz" target="_blank" rel="noreferrer">GTE</a>, an on-chain perpetuals exchange, where I design the interface and ship it.',
+    html: 'I\'m Arnas Goldberg, a design engineer based in Italy. I started freelancing as a logo designer at sixteen, spent ten years at Hanno moving from brand to web to front-end to healthcare product design, and spent three years at Ready shaping the wallet and its design system, with side projects along the way helping Vesu and Pure Poker get their design off the ground. Today I\'m head of design at <a href="https://gte.xyz" target="_blank" rel="noreferrer">GTE</a>, where I design the product and ship it in code.',
   },
   {
     type: "paragraph",

@@ -14,11 +14,25 @@ Sections marked `TODO` are placeholders to be filled in during the interview.
 
 ## Now
 
-Works on GTE (gte.xyz), an on-chain perpetuals exchange. Liquid Labs is the legal entity behind GTE. Arnas designs the interface and builds it: terminal, order flow, positions, brand.
+Head of design at GTE (gte.xyz). Liquid Labs is the legal entity behind GTE.
 
-GTE is a dark, dense trading product. The design problems are density, hierarchy under pressure, and speed. The design and the code are the same problem, which is why "design engineer" is the honest title.
+**What GTE is.** An exchange, but not the one most people picture. It aggregates across chains and venues, and it is building its own AI and agentic features to help traders act on their edge. Its own infrastructure may follow later.
 
-TODO: what specifically Arnas owns at GTE, what shipped recently, team size, what the day looks like.
+**What Arnas owns.** He joined in August 2025 as the first in-house designer and the web platform is the main product. He set up the design system, the structure, the principles for how the interface should look and behave, and the frameworks around it. Most of what a user sees in the web app is his design. He is not responsible for the brand: an agency built the identity before he joined, and while almost nothing of their UI survives, the identity stayed.
+
+**How that changed.** For the first months he worked in Figma and a team of front-end engineers implemented the designs. Around February and March 2026 he got AI-pilled and started shipping the work himself, in code. That changed the workflow for everyone, not just him.
+
+**The team.** GTE is around twenty to thirty people. Since summer 2026 Arnas leads a design team of three: a creative director who now owns the brand refresh with full ownership of it, and another product designer working with him on the product. All of them are senior and multi-skilled. He reports to the CEO. His closest collaborator on the engineering side is the head of front-end, a co-founder, who built the guardrails that keep anything Arnas ships production-safe, and who reviews most of his pull requests.
+
+**The arc, in short.** Hands-on individual contributor, then a design engineer shipping in code about half a year in, and now a head of design who still designs and still ships.
+
+## Why trading design suits him
+
+Around the COVID period Arnas traded, and traded a lot. He learned the mechanics, got somewhat profitable, and stopped when work took over, roughly when he joined Argent. He does not trade actively now.
+
+That history is the reason he can do this work. The hardest part of designing an exchange is not the interface, it is trading fluency: how trading actually works, the different types of traders, and the gap between retail and institutional needs. Nobody has to explain a feature to him or justify why it exists, because he has been the user. Not every feature and not at the deepest technical level, but enough to hold product, design and implementation in his head at once, and to build an exchange he would want to use himself.
+
+He was drawn to GTE because he had been gravitating toward trading himself and wanted to work at a startup in that world.
 
 ## Positioning
 
@@ -57,7 +71,7 @@ Helped an early-stage DeFi lending protocol on Starknet get its design off the g
 Helped the founders jumpstart design for a rake-free, real-money, social-first online poker platform: end-to-end experience from gameplay to community layer, brand identity, design system. Used Spline 3D, Rive animations and advanced Figma prototyping. Not a lead role; a jumpstart.
 
 ### 2025– · GTE
-See Now.
+Joined August 2025 as the first in-house designer, now head of design. See Now.
 
 ## Case studies (in the archive)
 
@@ -92,7 +106,13 @@ YouTube xd7ozgVvGB4. Shown on the archive page.
 
 ## How Arnas works
 
-TODO: process, how he starts a project, how he uses AI day to day, what he refuses to do, how he collaborates with engineers, opinions on design systems, on Figma vs code.
+**He ships.** Since early 2026 he designs and implements in code rather than handing Figma files to engineers. He still uses Figma, but the work isn't finished until it's in the product.
+
+**Design review in an AI team.** At GTE plenty of people can vibe code an idea into existence: front-end engineers, product people. Arnas often finds himself as the person who makes sure the result holds up as an experience, looks clean, fits the system, and doesn't look vibe coded. That role matters more now than pixel-pushing did.
+
+**Lead more, manage less.** He treats leadership and management as related but separate. With AI in the loop, a lot of management is close to solved: priorities and specs are clearer and more of the coordination can be automated. Leadership is where he sees the value. So he helps the other designers, delegates real ownership, and stays hands-on rather than reviewing work and telling people what to do. He would rather make things with his own hands than run a process.
+
+TODO: how he starts a project, how he uses AI day to day, what he refuses to do, opinions on design systems, on Figma versus code.
 
 ## Views
 
