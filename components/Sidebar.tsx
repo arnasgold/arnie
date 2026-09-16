@@ -69,7 +69,7 @@ export default function Sidebar() {
           })}
         </ul>
         <p className="eyebrow normal-case whitespace-nowrap hidden sm:block">
-          © {new Date().getFullYear()} {site.name}
+          © {new Date().getFullYear()} Arnie
         </p>
       </div>
     </aside>
