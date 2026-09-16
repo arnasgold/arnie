@@ -120,7 +120,10 @@ const WALK_LEFT: string[][] = WALK_RIGHT.map((f) =>
   f.map((row) => row.split("").reverse().join("")),
 );
 
-const WALK_TICKS_PER_FRAME = 2; // 12fps paint, so the legs cycle at 6Hz
+// Position changes only when the pose changes, never between: a figure that
+// slides while holding one pose reads as skating rather than walking.
+const WALK_TICKS_PER_FRAME = 1; // paints per animation frame
+const WALK_STEP_CELLS = 1; // cells travelled per animation frame
 
 const GRID_W = 7;
 const GRID_H = 9;
@@ -258,12 +261,14 @@ export default function Mark({
       const walking = w.dir !== 0 && e > 0.9;
       if (walking) {
         w.tick += 1;
-        if (w.tick % WALK_TICKS_PER_FRAME === 0) w.frame = (w.frame + 1) % WALK_RIGHT.length;
-        // the figure may leave its own box, but never the composer's width
-        const lane = canvas!.parentElement?.parentElement;
-        const laneW = lane ? lane.getBoundingClientRect().width : GRID_W * cell;
-        const limit = Math.max(0, (laneW - GRID_W * cell) / 2);
-        w.x = clamp(w.x + w.dir * cell, -limit, limit);
+        if (w.tick % WALK_TICKS_PER_FRAME === 0) {
+          w.frame = (w.frame + 1) % WALK_RIGHT.length;
+          // the figure may leave its own box, but never the composer's width
+          const lane = canvas!.parentElement?.parentElement;
+          const laneW = lane ? lane.getBoundingClientRect().width : GRID_W * cell;
+          const limit = Math.max(0, (laneW - GRID_W * cell) / 2);
+          w.x = clamp(w.x + w.dir * WALK_STEP_CELLS * cell, -limit, limit);
+        }
       }
       canvas!.style.transform = w.x ? `translateX(${Math.round(w.x)}px)` : "";
 
