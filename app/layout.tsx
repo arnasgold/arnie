@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
+import Sidebar from "@/components/Sidebar";
 import { site } from "@/lib/content";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${grotesk.variable} h-full`}>
-      <body className="min-h-full flex flex-col">
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="min-h-full">
+        <Sidebar />
+        <main className="min-h-screen sm:pl-[200px]">{children}</main>
       </body>
     </html>
   );
