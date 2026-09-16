@@ -6,15 +6,21 @@ import { COMPOSER_EVENT, type ComposerDetail } from "@/lib/mark-events";
  * The monogram, made of 14 squares, which unfolds into a 14-square figure.
  * Every square keeps its identity: the logo is the character, folded up.
  *
- * Logo (5x5)        Figure (6x8), facing you
+ * Logo (5x5)        Figure (6x10), facing you
  *   .###.             . . . . . .   <- the head rises into this row when turned
  *   #...#             . . # # . .   head
  *   #.###             . . . . . .
  *   #.#.#             . # # # # .   shoulders
- *   #...#             # . . # . #   hands, torso
+ *   #...#             # . . . . #   hands
+ *                     . . . . . .
  *                     . . . # . .   torso
- *                     . . # . # .   legs
- *                     . . # . # .   legs
+ *                     . . . # . .   torso
+ *                     . # . . # .   legs
+ *                     . # . . # .   legs
+ *
+ * Nothing touches anything. The head floats above the shoulder bar, the head
+ * and shoulders and hands sit as one block clear above the torso, and the left
+ * leg sits a column further out than the right so it clears the torso too.
  *
  * The head is two squares. Side by side it reads as facing you; stacked into a
  * one-wide column it reads as a profile. So turning the head is not a shift, it
@@ -41,23 +47,23 @@ const CELLS: Cell[] = [
   { logo: [3, 0], body: [3, 3], part: "shoulder" },
   // the inner crossbar becomes the rest of the shoulder line and the torso
   { logo: [2, 2], body: [2, 3], part: "shoulder" },
-  { logo: [3, 2], body: [3, 4], part: "torso" },
-  { logo: [2, 3], body: [3, 5], part: "torso" },
+  { logo: [3, 2], body: [3, 6], part: "torso" },
+  { logo: [2, 3], body: [3, 7], part: "torso" },
   // the left spine of the G becomes the left side, top to bottom
   { logo: [0, 1], body: [0, 4], part: "hand" },
   { logo: [0, 2], body: [1, 3], part: "shoulder" },
-  { logo: [0, 3], body: [2, 6], part: "leg" },
-  { logo: [0, 4], body: [2, 7], part: "leg" },
+  { logo: [0, 3], body: [1, 8], part: "leg" },
+  { logo: [0, 4], body: [1, 9], part: "leg" },
   // the right spine becomes the right side
   { logo: [4, 1], body: [5, 4], part: "hand" },
   { logo: [4, 2], body: [4, 3], part: "shoulder" },
-  { logo: [4, 3], body: [4, 6], part: "leg" },
-  { logo: [4, 4], body: [4, 7], part: "leg" },
+  { logo: [4, 3], body: [4, 8], part: "leg" },
+  { logo: [4, 4], body: [4, 9], part: "leg" },
 ];
 
 const GRID_W = 7;
-const GRID_H = 8;
-const LOGO_ORIGIN: [number, number] = [1, 1.5];
+const GRID_H = 10;
+const LOGO_ORIGIN: [number, number] = [1, 2.5];
 const BODY_ORIGIN: [number, number] = [0.5, 0];
 
 const FPS = 12; // low frame rate is most of the charm
