@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { site } from "@/lib/content";
 import { socialPaths } from "@/lib/social-paths";
 
@@ -22,17 +23,45 @@ const iconKey: Record<string, string> = {
 
 const trim = (p: string) => (p.length > 1 ? p.replace(/\/+$/, "") : p);
 
-function Item({ children, active }: { children: React.ReactNode; active?: boolean }) {
-  return (
-    <span className="flex items-center gap-2">
-      <span aria-hidden className={`h-1.5 w-1.5 shrink-0 ${active ? "bg-ink" : "bg-transparent"}`} />
-      {children}
-    </span>
-  );
-}
+// overshoot, so the square arrives with a bit of weight
+const EASE = "cubic-bezier(0.34, 1.56, 0.64, 1)";
 
 export default function Sidebar() {
   const pathname = trim(usePathname() ?? "/");
+  const active = pages.find((p) => trim(p.href) === pathname)?.href ?? null;
+
+  const navRef = useRef<HTMLElement>(null);
+  const slots = useRef<Record<string, HTMLSpanElement | null>>({});
+  const [pos, setPos] = useState({ x: 0, y: 0, shown: false });
+  const [animate, setAnimate] = useState(false);
+
+  useLayoutEffect(() => {
+    const measure = () => {
+      const nav = navRef.current;
+      const slot = active ? slots.current[active] : null;
+      if (!nav || !slot) {
+        setPos((p) => ({ ...p, shown: false }));
+        return;
+      }
+      const n = nav.getBoundingClientRect();
+      const s = slot.getBoundingClientRect();
+      setPos({ x: s.left - n.left, y: s.top - n.top, shown: true });
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    if (navRef.current) ro.observe(navRef.current);
+    window.addEventListener("resize", measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [active, pathname]);
+
+  // never animate the first placement, only moves after it
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setAnimate(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   return (
     <aside
@@ -43,18 +72,34 @@ export default function Sidebar() {
         sm:border-b-0 sm:border-r sm:px-6 sm:py-8
       "
     >
-      <nav>
+      <nav ref={navRef} className="relative">
+        <span
+          aria-hidden
+          className="pointer-events-none absolute left-0 top-0 h-1.5 w-1.5 bg-ink motion-reduce:transition-none"
+          style={{
+            transform: `translate3d(${pos.x}px, ${pos.y}px, 0)`,
+            opacity: pos.shown ? 1 : 0,
+            transition: animate ? `transform 440ms ${EASE}, opacity 200ms linear` : "none",
+          }}
+        />
         <ul className="flex flex-wrap items-center gap-x-5 gap-y-1.5 sm:flex-col sm:items-start sm:gap-y-2.5">
           {pages.map((p) => {
-            const active = pathname === trim(p.href);
+            const isActive = active === p.href;
             return (
               <li key={p.href}>
                 <Link
                   href={p.href}
-                  aria-current={active ? "page" : undefined}
-                  className={active ? "text-ink" : "hover:text-ink"}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`flex items-center gap-2 ${isActive ? "text-ink" : "hover:text-ink"}`}
                 >
-                  <Item active={active}>{p.label}</Item>
+                  <span
+                    aria-hidden
+                    ref={(el) => {
+                      slots.current[p.href] = el;
+                    }}
+                    className="h-1.5 w-1.5 shrink-0"
+                  />
+                  {p.label}
                 </Link>
               </li>
             );
@@ -65,9 +110,10 @@ export default function Sidebar() {
                 href={e.href}
                 target={e.newTab ? "_blank" : undefined}
                 rel={e.newTab ? "noreferrer" : undefined}
-                className="hover:text-ink"
+                className="flex items-center gap-2 hover:text-ink"
               >
-                <Item>{e.label}</Item>
+                <span aria-hidden className="h-1.5 w-1.5 shrink-0" />
+                {e.label}
               </a>
             </li>
           ))}
