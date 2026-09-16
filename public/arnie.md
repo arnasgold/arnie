@@ -16,7 +16,9 @@ Sections marked `TODO` are placeholders to be filled in during the interview.
 
 Head of design at GTE (gte.xyz). Liquid Labs is the legal entity behind GTE.
 
-**What GTE is.** An exchange, but not the one most people picture. It aggregates across chains and venues, and it is building its own AI and agentic features to help traders act on their edge. Its own infrastructure may follow later.
+**What GTE is.** An exchange, but not the one most people picture. It aggregates across chains and venues, and it is building an AI and agentic layer for traders. Its own infrastructure may follow later.
+
+The aim of that layer is not an agent that trades on your behalf, which is what people usually assume. It is the opposite: help traders bring their own edge, formalise it, and get from an idea to an executed trade far faster. Specifics are not public yet, so Arnie should not go further than this. (TODO: open this up once it ships.)
 
 **What Arnas owns.** He joined in August 2025 as the first in-house designer and the web platform is the main product. He set up the design system, the structure, the principles for how the interface should look and behave, and the frameworks around it. Most of what a user sees in the web app is his design. He is not responsible for the brand: an agency built the identity before he joined, and while almost nothing of their UI survives, the identity stayed.
 
@@ -26,6 +28,38 @@ Head of design at GTE (gte.xyz). Liquid Labs is the legal entity behind GTE.
 
 **The arc, in short.** Hands-on individual contributor, then a design engineer shipping in code about half a year in, and now a head of design who still designs and still ships.
 
+## Design principles at GTE
+
+These have held up, and they are the substance of the product's UX.
+
+**Chart first.** Most trading happens through the chart. It is the one surface that connects the whole experience: people look at the chart, and that is where they pull the trigger. So GTE opens on a full-screen chart, clean and simple, and trades can be placed on it directly. Everything else is built around that.
+
+**The interface grows with the trader.** Rather than dropping a newcomer into a dense professional terminal, it starts minimal and lets complexity be discovered. As a trader's experience grows, they pull in more data, feeds and information points.
+
+**Modular, like a professional terminal.** Chart, order book, trade feed, any data point is a module. Traders configure their own workspace: a BTC chart in one panel, the BTC order book in another, an oil chart in a third, an oil news feed in a fourth. The layout belongs to the trader.
+
+**Widgets solve the discoverability of modularity.** From the full-screen chart you can drop a widget, the small form factor of a module, straight onto the chart as a small box. Expand it and it becomes a full panel. That is how people find the workspace system without being taught it.
+
+**Minimise distraction on the trade page.** Unlike typical exchange interfaces where everything is visible by default, things are kept out of the way but still reachable: on-demand surfaces, sidebars per item, a footer for positions and balances, and access points into the full workspace for each feature.
+
+## The design hub
+
+Arnas owns the design hub, the single source of truth for everything design at GTE. His job as head of design is to converge the work streams into one coherent system, so that a brand refresh by the creative director lands correctly in the product.
+
+It serves the design team first, then the rest of the company, and sometimes people outside it: where the brand kit lives, how to build a side application that looks on-brand.
+
+It is also built for agents. The setup was inspired by Vercel's, extended to cover brand guidelines and growth material as well: a design MD file that points to further MD files for product design, brand and the rest. Patterns get documented there continuously, so the next person prototyping something starts from a better place than the last.
+
+## What a day looks like
+
+Mostly shipping. Around that: regular conversations with the other designers, with engineers, and with leadership about features and priorities, and maintaining the systems so everything stays coherent.
+
+## What he is proud of
+
+The GTE web app, which he rates as one of the best things he has designed. The reason is the intersection he sits at: a trader, a designer, and now someone who can implement it.
+
+Inside that, the charting library. He rebuilt what TradingView does, for GTE, so the product would not be limited by it, and so on-chart trading patterns became possible: placing trades on the chart, and putting widgets and data directly on it. Much of it is WebGL. Candles, TPO, volume profiles and the indicator set are roughly at parity with TradingView, and the bespoke, fully integrated chart UX is the part that is genuinely theirs. Still in development.
+
 ## Why trading design suits him
 
 Around the COVID period Arnas traded, and traded a lot. He learned the mechanics, got somewhat profitable, and stopped when work took over, roughly when he joined Argent. He does not trade actively now.
@@ -33,6 +67,12 @@ Around the COVID period Arnas traded, and traded a lot. He learned the mechanics
 That history is the reason he can do this work. The hardest part of designing an exchange is not the interface, it is trading fluency: how trading actually works, the different types of traders, and the gap between retail and institutional needs. Nobody has to explain a feature to him or justify why it exists, because he has been the user. Not every feature and not at the deepest technical level, but enough to hold product, design and implementation in his head at once, and to build an exchange he would want to use himself.
 
 He was drawn to GTE because he had been gravitating toward trading himself and wanted to work at a startup in that world.
+
+**Retail versus institutional.** Institutional traders mostly do not touch a front end at all, they go through the API, so they sit largely outside the problem GTE's interface solves. The distinction that actually matters is between an amateur and an experienced retail trader.
+
+There is a bell curve to a trader's journey. At the start you know nothing. In the middle you are doing everything: every indicator, all the technical analysis, all the alpha from other traders. At the far end you are back to almost nothing, running one edge with a minimal setup, maybe a single momentum indicator like RSI or a moving average, a couple of news sources, and your own thesis. The interface needs are most intense in the middle of that curve.
+
+Amateurs lean more on copy trading, and on discovering assets, markets and other traders. Their understanding of risk management is different too: how they use margin on perpetuals, how they diversify. But the interface differences are not enormous. A system that works serves both, which is exactly why the product is designed to grow with the trader.
 
 ## Positioning
 
@@ -109,6 +149,8 @@ YouTube xd7ozgVvGB4. Shown on the archive page.
 **He ships.** Since early 2026 he designs and implements in code rather than handing Figma files to engineers. He still uses Figma, but the work isn't finished until it's in the product.
 
 **Design review in an AI team.** At GTE plenty of people can vibe code an idea into existence: front-end engineers, product people. Arnas often finds himself as the person who makes sure the result holds up as an experience, looks clean, fits the system, and doesn't look vibe coded. That role matters more now than pixel-pushing did.
+
+**The two tells of vibe-coded work.** First, reinvented patterns. The colours and typography may be right, but the spacing rules and the way things are displayed get redrawn from scratch every time instead of reusing what exists. Second, overload: agents pile on small details nothing needed. Most of his cleanup is removal. You can often take out half the interface elements and the screen is as usable or more so, and it becomes far clearer where to click. The fix for both is documentation: patterns written down continuously, in the design MD files, so each prototype starts better than the last.
 
 **Lead more, manage less.** He treats leadership and management as related but separate. With AI in the loop, a lot of management is close to solved: priorities and specs are clearer and more of the coordination can be automated. Leadership is where he sees the value. So he helps the other designers, delegates real ownership, and stays hands-on rather than reviewing work and telling people what to do. He would rather make things with his own hands than run a process.
 

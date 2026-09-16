@@ -114,7 +114,7 @@ export const projects: Project[] = [
   {
     "slug": "ready",
     "title": "Ready (formerly Argent)",
-    "year": "2022 - PRESENT",
+    "year": "2022 - 2025",
     "category": "Crypto Wallet",
     "deliverables": [
       "Brand Identity",
