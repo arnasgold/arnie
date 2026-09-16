@@ -64,22 +64,12 @@ const CELLS: Cell[] = [
 ];
 
 /**
- * Walk cycle, facing right. Six wide, nine tall, fourteen squares per frame.
- * Edit these strings to retune the animation; "#" is a square, "." is empty.
+ * Walk cycle, facing right. Six wide, nine tall, decoded pixel for pixel from
+ * the frames in walk-frames/. "#" is a square, "." is empty. Frames 1, 2 and 4
+ * carry the full fourteen squares; frame 3 carries thirteen, as drawn.
  */
 const WALK_RIGHT: string[][] = [
   [
-    "...#..", // head, turned the way it walks
-    "...#..",
-    "......",
-    ".####.", // shoulders
-    "#....#", // hands
-    "...#..", // torso
-    "...#..",
-    ".#..#.", // legs, contact: feet apart
-    "#....#",
-  ],
-  [
     "...#..",
     "...#..",
     "......",
@@ -87,30 +77,41 @@ const WALK_RIGHT: string[][] = [
     "#....#",
     "...#..",
     "...#..",
-    "..##..", // passing: legs gathering
     ".#..#.",
+    "#....#",
+  ],
+  [
+    "......",
+    "...#..",
+    "...#..",
+    "......",
+    ".#####",
+    ".#.#..",
+    "...#..",
+    ".##..#",
+    ".....#",
   ],
   [
     "...#..",
     "...#..",
     "......",
-    ".####.",
-    "#....#",
+    "..##..",
+    "..###.",
     "...#..",
     "...#..",
-    "..#.#.", // contact the other way
-    ".#...#",
-  ],
-  [
-    "...#..",
-    "...#..",
-    "......",
-    ".####.",
-    "#....#",
-    "...#..",
-    "...#..",
-    "..##..", // passing again, opposite leg
     "..#.#.",
+    "..##..",
+  ],
+  [
+    "...#..",
+    "...#..",
+    "......",
+    ".####.",
+    ".#..#.",
+    "...#..",
+    "...##.",
+    "..#..#",
+    ".#....",
   ],
 ];
 
