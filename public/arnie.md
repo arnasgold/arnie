@@ -60,6 +60,12 @@ The GTE web app, which he rates as one of the best things he has designed. The r
 
 Inside that, the charting library. He rebuilt what TradingView does, for GTE, so the product would not be limited by it, and so on-chart trading patterns became possible: placing trades on the chart, and putting widgets and data directly on it. Much of it is WebGL. Candles, TPO, volume profiles and the indicator set are roughly at parity with TradingView, and the bespoke, fully integrated chart UX is the part that is genuinely theirs. Still in development.
 
+## What is still unfinished
+
+There is always something, and that is structural: agentic tooling means anyone on the team can ship overnight, so Arnas keeps finding new things that need polishing. GTE is still early enough that there is no proper release and QA discipline around it yet.
+
+The thing he most wants to fix himself is the charting library. There are many features he still wants in it before it feels complete. He thinks charting could justify a dedicated team inside GTE on its own.
+
 ## Why trading design suits him
 
 Around the COVID period Arnas traded, and traded a lot. He learned the mechanics, got somewhat profitable, and stopped when work took over, roughly when he joined Argent. He does not trade actively now.
@@ -154,11 +160,27 @@ YouTube xd7ozgVvGB4. Shown on the archive page.
 
 **Lead more, manage less.** He treats leadership and management as related but separate. With AI in the loop, a lot of management is close to solved: priorities and specs are clearer and more of the coordination can be automated. Leadership is where he sees the value. So he helps the other designers, delegates real ownership, and stays hands-on rather than reviewing work and telling people what to do. He would rather make things with his own hands than run a process.
 
-TODO: how he starts a project, how he uses AI day to day, what he refuses to do, opinions on design systems, on Figma versus code.
+**How he actually uses AI.** For anything ambitious, he does due diligence with the agent first: ask for several approaches and their trade-offs, then make the call himself. Often the call is to say no. It makes no sense to pull in WebGL or Three.js for a single button interaction that lives in one place; that is a dependency you carry forever. For small things he skips the agent entirely and edits the Tailwind classes in the editor, because changing spacing or a colour by hand is faster than asking and waiting.
+
+Part of why this works is that he has always liked hacking on interfaces. At Hanno he did real front-end work, HTML and CSS with no AI anywhere, styling interfaces that another front-end engineer had prototyped. That habit of structure is what makes the AI work orderly now.
+
+TODO: how he starts a project, what he refuses to do, Figma versus code.
 
 ## Views
 
-TODO: opinions on design, AI and design work, crypto/DeFi UX, what makes a good product, what he thinks is overrated.
+**Designers with AI still need technical understanding.** This is the one he will argue about. Designers are excited that they can now ship, and they can, but working successfully inside a team is a different bar. He has seen a designer build a feature end to end and, without realising, let an agent implement new backend endpoints instead of stubbing demo data. The pull request came out over ten thousand lines. Nobody can review that.
+
+So you still need to think like a front-end engineer: how to split the work, how to make it reviewable for someone else, how to structure it, how to refactor so it feeds back into the design system rather than away from it. Without that, a designer with an agent mostly adds weight to the codebase. Conceptual understanding of the trade-offs is the minimum.
+
+**Crypto and DeFi interfaces.** He is not precious about a single diagnosis here. The honest version: the category has a bad reputation and bringing in people who don't already use crypto is hard. Most interfaces look low quality, thrown together for a quick project with little craft, and lately they look vibe coded. Given the reputation, low quality reads as scam. Uniswap is the counter-example, refined and well thought through, and it has been around roughly as long as the space has.
+
+He thinks the more interesting question is what works rather than what is broken. Much of Web3 is quietly going back to Web2 patterns, and that is fine, because it works: Privy lets someone type an email, end up with a wallet and deposit money. What works generally is modular providers that own one part of the experience well, wallet creation, deposits and withdrawals, and let products like GTE integrate them rather than rebuild them.
+
+**Design systems.** He has never seen them as theatre. At the very start they matter less, and that is the most fun anyone gets to have: a fresh system and a fresh product, moving as fast as you like, making components and screens without checking anything for compliance. But start thinking about the system early anyway, because the day always comes when the work has to exist on another platform.
+
+If GTE starts on web and then builds a mobile app, someone using both has to feel it is the same GTE. The foundations carry that: colour, typography, the atomic components like buttons. The UX patterns will differ, and some simply won't exist on mobile, and that is fine. The system is also where the brand reaches the product, and where you add enough character that the interface doesn't look generic. In a startup it is harder to maintain, the pace fights it, and it can slow work down, but it still needs real maintenance.
+
+TODO: what makes a good product, what he thinks is overrated, what work he would turn down.
 
 ## Outside work
 
