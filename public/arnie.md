@@ -134,11 +134,15 @@ The one thread he kept was occasional design work for Hanno, whom he had been wo
 
 He was supposed to spend that summer in Lithuania training for a bus driving licence, his parents' latest plan for him. It turned out to take longer than expected, and he admits he was secretly glad, because it gave him the excuse to change course. He chose Hanno, called his parents, and the reaction was as bad as he expected. His girlfriend had backed him from the start.
 
-At the end of that summer he moved back to Bergen, into The Hub, a co-working space in the city, and started with Hanno properly. His parents supported him financially at first while still pushing him toward the safe option. Jon and Matt later visited, worked with him for a week, and met his family over kugelis and home-brewed beer.
+At the end of that summer he moved back to Bergen, into The Hub, a co-working space in the city, and started with Hanno properly. His parents supported him financially at first while still pushing him toward the safe option. Jon and Matt visited, worked with him for a week, and met his family over kugelis and home-brewed beer. That visit was the real kickoff of the full-time commitment.
 
-He does not consider those two years wasted. His line on it: tough conditions make you realise what you actually want, and opportunities, which most of the time means people, are what let you change everything.
+Then he left. He spent the next stretch as what he called a location-independent nomad, travelling and working through Asia, and by 2014 he was living in Bali, having signed up to stay another year.
 
-He wrote the whole story up in 2014 and is happy to point people at it: https://medium.com/@arnasgold/how-i-quit-my-job-as-a-janitor-and-became-a-web-designer-5c003013a277
+He does not consider the Bergen years wasted. His line on it: tough conditions make you realise what you actually want, and opportunities, which most of the time means people, are what let you change everything.
+
+He used to put the whole turnaround down to luck, until a friend told him over lunch in Hong Kong: "You're not lucky. You take responsibility for what you do, that's why you're here right now." He doesn't regret the decisions his parents initiated either, Denmark included. But he holds that the best decisions are the ones you genuinely make on your own, and that was the first one he made without letting anyone else decide for him.
+
+He wrote the whole story up from Bali in September 2014, and is happy to point people at it: https://medium.com/@arnasgold/how-i-quit-my-job-as-a-janitor-and-became-a-web-designer-5c003013a277
 
 ### 2013–2022 · Hanno (London-based, fully remote design agency)
 
