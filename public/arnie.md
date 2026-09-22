@@ -88,6 +88,12 @@ Amateurs lean more on copy trading, and on discovering assets, markets and other
 - Generalist by temperament. Brand, illustration, motion, interaction, systems, code. Each changed how he does the others. The combination is the point: an idea can go from sketch to working product without a handoff.
 - Curiosity drives most of it. Creativity is how it comes together.
 
+**How the range actually happened.** It was not a plan. The culture at Hanno meant figuring things out, and he had the appetite for it, so new skills came from curiosity rather than instruction: nights spent on After Effects tutorials because motion graphics looked fun. He would show what he had made, the team would see the result, and it would turn into something they could offer clients. Lenovo's presentation video, heavy on motion graphics and animated product interfaces, exists because of that.
+
+He is happy to call it a line of accidents, but the intent underneath was consistent: he wanted a full understanding of every medium he could express an idea in.
+
+The payoff was combining them. Motion principles made his interface and web work better. At one point he started hand-animating his Illustrator illustrations in SVG, because the principles carried straight over, then went through the SVG documentation to find out what else was possible. Suddenly the team could build far more interactive websites than before.
+
 
 ## Stack
 
@@ -146,9 +152,19 @@ He wrote the whole story up from Bali in September 2014, and is happy to point p
 
 ### 2013–2022 · Hanno (London-based, fully remote design agency)
 
-The best part of a decade. Started on brand identities, illustration and marketing collateral. Added web design and front-end to help the team ship websites. Learned motion graphics to design better interactions. Delivered for startups and companies including Sony and Lenovo.
+Nine years full-time, though Arnie usually says ten, because he was already freelancing for Jon and Matt before Hanno existed, and working with Jon earlier still on websites and illustration. Nine years with the company, about ten with the people.
 
-Around year five Hanno specialised in healthcare. Most projects became greenfield ventures helping traditional healthcare brands transform. That put UX at the centre of the process: Design Thinking, research collaboration, design systems. Became a hands-on creative lead bridging ideation and development, working with researchers, designers, stakeholders and developers for Omron, Ipsen and Smith+Nephew.
+Started on brand identities, illustration and marketing collateral. Added web design and front-end to help the team ship websites. Learned motion graphics to design better interactions. Delivered for startups and companies including Sony and Lenovo.
+
+**Why he stayed that long.** The team grew together and went through the same ups and downs, moving from one kind of work to the next. It ran on trust rather than process. Everyone could work from anywhere, which is the thing that let him actually have a life alongside it: travelling, photography, people outside work. He never felt like he was only working; he felt like he was living, and the job paid for it.
+
+They also backed whatever he wanted to learn next. When he wanted to design in code, he paired with a teammate, watching each other work and being corrected as he went. The culture let people grow into things rather than stay in their lane. And the interactive website projects were genuinely fun, which he does not treat as a small detail.
+
+**The healthcare years.** A new teammate arrived with more corporate experience, the team took a more serious stance, and he landed bigger clients. Hanno specialised in healthcare, and most projects became greenfield ventures helping traditional healthcare brands transform. That put UX at the centre of the process: Design Thinking, research collaboration, design systems. Arnie became a hands-on creative lead bridging ideation and development, working with researchers, designers, stakeholders and developers for Omron, Ipsen and Smith+Nephew. Work ranged from website campaigns to small supporting products to greenfield product design for nurses and doctors.
+
+Some of that greenfield work never saw daylight. He counts it as a real education anyway, in how hard innovation is in that industry: the boundaries are regulatory and they barely move, and changing anything needs serious investment.
+
+**How it ended.** That difficulty is largely what pulled the team apart. Hanno wound down, and everyone went off to something else. It was the end for all of them, not just him.
 
 ### 2022–2025 · Ready (formerly Argent)
 
