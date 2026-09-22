@@ -110,29 +110,39 @@ Then he built a portfolio on Logopond, the logo site everyone looked at in that 
 
 That portfolio is what won him a place at UCN. By the time the school-leaving exams came round he was already accepted, so he sat them with no nerves at all and walked out first while everyone else used the extra time. It was a formality.
 
-### Design studies in Denmark, UCN
+### 2011–2012 · Design studies in Denmark, UCN
 
-University College of Northern Denmark. Design Technology and Business, which in practice meant graphics: a two-year course leading to an AP diploma, which is not a bachelor's.
+He finished high school in Lithuania in 2011. His family was already packing up to move to Norway, and he largely let them decide his next step: Denmark, because the education was free. So he went to Aalborg, in the north, and started graphic design at University College of Northern Denmark. Design Technology and Business, a two-year course leading to an AP diploma.
 
-He lasted under a year. The material was good, but he was ahead of much of it, and a lot of the time it amounted to putting formal names on things he already did: principles, theory, methodology. He says that without arrogance. It simply felt like the wrong use of his time, and he was freelancing alongside it anyway.
+He lasted five months. He had already been freelancing for about four years, so the course was mostly putting formal names on things he could already do. He also worked out that the AP diploma sits below a bachelor's and isn't recognised in most countries, which made finishing feel less worth it.
 
-He is honestly ambivalent about it now. He could have finished and held a qualification, and it is hard to say whether that would have changed anything. At the time, quitting felt right.
+He is genuinely ambivalent about it now. He could have finished and held a qualification, and it is hard to say whether that would have changed anything. At the time, quitting felt right.
 
 What it did give him was client work as a discipline: managing expectations, contracts, how a project actually runs. Before that he had been winging all of it.
 
-The bigger thing was leaving Lithuania at all. He had never been abroad. Seeing a country that far ahead of the one he grew up in widened what he thought was possible, and he came out of it seeing more options than he went in with.
+The bigger thing was leaving Lithuania at all. He had never been abroad. Living alone in a country that far ahead of the one he grew up in widened what he thought was possible.
 
-### Norway, and the janitor period
+### 2012–2013 · Bergen, and the janitor years
 
-The plan after quitting was Norway, a design job, and eventually Hyper Island in Sweden. The design job did not materialise, and he is the first to say he was arrogant about how easy it would be.
+The plan after quitting was to join his family in Bergen, find work, learn Norwegian, and eventually study somewhere better, Hyper Island in Sweden being the idea. None of that happened.
 
-So he cleaned. A few months at IKEA in Norway, then schools, essentially a janitor, freelancing on the side while he worked out what to do next. He wrote about it later, once life had flipped and he had moved to Bali, and the piece found an audience in the digital nomad community. Strangers would recognise him from it.
+With no qualifications, the only work open to him was unqualified work. He cleaned a school, and he spent six months at IKEA pushing trolleys, driving tractors and cleaning toilets. For a stretch both jobs overlapped and he worked twelve-hour days. Freelancing couldn't replace it either, because Norwegian living costs were far beyond what his international clients had been paying in Lithuania.
 
-He is happy to point people at it: https://medium.com/@arnasgold/how-i-quit-my-job-as-a-janitor-and-became-a-web-designer-5c003013a277
+He describes those two years bluntly: miserable, no life, no energy, and the feeling that his passion for design was quietly dying. The pressure from his family to stay on the safe path made it harder to do any real work.
 
-### ~2012–2022 · Hanno (London-based, fully remote design agency)
+The one thread he kept was occasional design work for Hanno, whom he had been working with remotely for years without ever meeting. That thread is what saved him. Matt mentioned the team was going to Valencia and he was welcome to come; he had no time and made some anyway. A week in that co-working space was the first creative satisfaction he'd had in years, and at the end of it Jon raised the idea of working together more often.
 
-Ten years. Started on brand identities, illustration and marketing collateral. Added web design and front-end to help the team ship websites. Learned motion graphics to design better interactions. Delivered for startups and companies including Sony and Lenovo.
+He was supposed to spend that summer in Lithuania training for a bus driving licence, his parents' latest plan for him. It turned out to take longer than expected, and he admits he was secretly glad, because it gave him the excuse to change course. He chose Hanno, called his parents, and the reaction was as bad as he expected. His girlfriend had backed him from the start.
+
+At the end of that summer he moved back to Bergen, into The Hub, a co-working space in the city, and started with Hanno properly. His parents supported him financially at first while still pushing him toward the safe option. Jon and Matt later visited, worked with him for a week, and met his family over kugelis and home-brewed beer.
+
+He does not consider those two years wasted. His line on it: tough conditions make you realise what you actually want, and opportunities, which most of the time means people, are what let you change everything.
+
+He wrote the whole story up in 2014 and is happy to point people at it: https://medium.com/@arnasgold/how-i-quit-my-job-as-a-janitor-and-became-a-web-designer-5c003013a277
+
+### 2013–2022 · Hanno (London-based, fully remote design agency)
+
+The best part of a decade. Started on brand identities, illustration and marketing collateral. Added web design and front-end to help the team ship websites. Learned motion graphics to design better interactions. Delivered for startups and companies including Sony and Lenovo.
 
 Around year five Hanno specialised in healthcare. Most projects became greenfield ventures helping traditional healthcare brands transform. That put UX at the centre of the process: Design Thinking, research collaboration, design systems. Became a hands-on creative lead bridging ideation and development, working with researchers, designers, stakeholders and developers for Omron, Ipsen and Smith+Nephew.
 
