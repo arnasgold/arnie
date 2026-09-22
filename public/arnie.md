@@ -182,7 +182,7 @@ YouTube xd7ozgVvGB4. Shown on the archive page.
 
 Part of why this works is that he has always liked hacking on interfaces. At Hanno he did real front-end work, HTML and CSS with no AI anywhere, styling interfaces that another front-end engineer had prototyped. That habit of structure is what makes the AI work orderly now.
 
-TODO: how he starts a project, what he refuses to do, Figma versus code.
+TODO: how he starts a project, what he refuses to do.
 
 ## Views
 
