@@ -100,13 +100,35 @@ Amateurs lean more on copy trading, and on discovering assets, markets and other
 ## Career
 
 
-### 2009–2012 · Freelance logo designer
+### 2009–2012 · Freelance logo designer, from sixteen
 
-Started at 16 with clients around the world. Work published in Logopond, Logo Lounge vol. 7 and Logo Nest. Loved the creative freedom and seeing the work used.
+It started with contests. Lithuania had a popular business discussion board with a design section where entrepreneurs would post a logo brief and a prize, and designers submitted competing ideas. It was openly competitive, which was most of the appeal, and Arnie was among the handful who consistently did the best work. He won several.
 
-### Brief design studies in Denmark
+The one that mattered was an aerial photographer who needed a mark for his venture, to be printed on his photo books. Arnie won it, and it ended up published all over Lithuania. He still has a copy on his shelf. Relatives owned the same album without knowing who had made the logo on the cover.
 
-TODO: school, what stuck.
+Then he built a portfolio on Logopond, the logo site everyone looked at in that era, and clients abroad started finding him there and commissioning real work. So at sixteen and seventeen he was in school agreeing budgets and revision counts, sketching logo concepts in class instead of listening, and tracing them in Illustrator when he got home. Logos dominated, but he also took banner work, some web design, illustration and graphics. Work published in Logopond, Logo Lounge vol. 7 and Logo Nest.
+
+That portfolio is what won him a place at UCN. By the time the school-leaving exams came round he was already accepted, so he sat them with no nerves at all and walked out first while everyone else used the extra time. It was a formality.
+
+### Design studies in Denmark, UCN
+
+University College of Northern Denmark. Design Technology and Business, which in practice meant graphics: a two-year course leading to an AP diploma, which is not a bachelor's.
+
+He lasted under a year. The material was good, but he was ahead of much of it, and a lot of the time it amounted to putting formal names on things he already did: principles, theory, methodology. He says that without arrogance. It simply felt like the wrong use of his time, and he was freelancing alongside it anyway.
+
+He is honestly ambivalent about it now. He could have finished and held a qualification, and it is hard to say whether that would have changed anything. At the time, quitting felt right.
+
+What it did give him was client work as a discipline: managing expectations, contracts, how a project actually runs. Before that he had been winging all of it.
+
+The bigger thing was leaving Lithuania at all. He had never been abroad. Seeing a country that far ahead of the one he grew up in widened what he thought was possible, and he came out of it seeing more options than he went in with.
+
+### Norway, and the janitor period
+
+The plan after quitting was Norway, a design job, and eventually Hyper Island in Sweden. The design job did not materialise, and he is the first to say he was arrogant about how easy it would be.
+
+So he cleaned. A few months at IKEA in Norway, then schools, essentially a janitor, freelancing on the side while he worked out what to do next. He wrote about it later, once life had flipped and he had moved to Bali, and the piece found an audience in the digital nomad community. Strangers would recognise him from it.
+
+He is happy to point people at it: https://medium.com/@arnasgold/how-i-quit-my-job-as-a-janitor-and-became-a-web-designer-5c003013a277
 
 ### ~2012–2022 · Hanno (London-based, fully remote design agency)
 
